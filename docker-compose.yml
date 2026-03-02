@@ -2,7 +2,7 @@ services:
   frontend:
     build:
       context: frontend/.
-    image: mern-frontend
+    image: afroz25/mern-frontend
     depends_on:
       db:
         condition: service_healthy
@@ -14,7 +14,7 @@ services:
   backend:
     build:
       context: backend/.
-    image: mern-backend
+    image: afroz25/mern-backend
     depends_on:
       db:
         condition: service_healthy
