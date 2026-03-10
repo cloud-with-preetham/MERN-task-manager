@@ -23,7 +23,7 @@ export default [
       }
     },
     rules: {
-      "no-unused-vars": ["error", { "varsIgnorePattern": "React|^[A-Z]" }]
+      "no-unused-vars": ["error", { "varsIgnorePattern": "React|^[A-Z]" },{ "argsIgnorePattern": "^_" }]
     }
   }
 ];
