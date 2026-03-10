@@ -1,4 +1,5 @@
 import js from "@eslint/js";
+import globals from "globals";
 
 export default [
   js.configs.recommended,
@@ -6,12 +7,8 @@ export default [
     files: ["**/*.js"],
     languageOptions: {
       ecmaVersion: "latest",
-      sourceType: "commonjs",
-    },
-    linterOptions: {
-      env: {
-        node: true
-      }
+      sourceType: "commonjs", // Node uses require/module.exports
+      globals: globals.node // enables require, module, process, __dirname, console
     },
     rules: {
       "no-unused-vars": "warn"
