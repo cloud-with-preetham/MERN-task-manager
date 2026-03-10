@@ -31,4 +31,4 @@ jobs:
         run: npm ci
 
       - name: audit dependencies
-        run: npm audit --audit-level=high
+        run: npm audit fix --force
