@@ -1,8 +1,7 @@
 name: code quality
 
 on:
-  #workflow_call:
-  push:
+  workflow_call:
 
 jobs:
 
@@ -31,7 +30,6 @@ jobs:
       - name: install dependencies
         run: |
           npm install
-          #npm audit fix
           npm run
 
       - name: run lint
@@ -44,5 +42,5 @@ jobs:
           # Use 'javascript-typescript' to cover all Node.js/JS/TS files
           languages: javascript-typescript
 
-      - name: Perform Analysis
+      - name: Perform Analysis (SAST)
         uses: github/codeql-action/analyze@v4
