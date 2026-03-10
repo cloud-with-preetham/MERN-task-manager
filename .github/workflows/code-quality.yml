@@ -1,0 +1,30 @@
+name: code quality
+
+on:
+  #workflow_call:
+  workflow_dispatch:
+
+jobs:
+
+  validate:
+    runs-on: ubuntu
+    strategy:
+      matrix:
+        folder: [backend, frontend]
+
+    steps:
+
+      - name: code checkout
+        uses: actions/codecheckout@v4
+
+      - name: setup node
+        uses: actions/setup-node@v6
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: install dependencies
+        run: npm ci
+
+      - name: run lint
+        run: npm run lint actions/setup-node@v6
