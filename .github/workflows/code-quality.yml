@@ -31,6 +31,7 @@ jobs:
           npm install
           npm audit fix
           npm run
+        working-directory: ${{ matrix.folder }}
 
       - name: run lint
         run: npm run lint actions/setup-node@v6
