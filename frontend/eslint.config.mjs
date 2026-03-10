@@ -1,6 +1,5 @@
 import js from "@eslint/js";
 import babelParser from "@babel/eslint-parser";
-import globals from "globals";
 
 export default [
   js.configs.recommended,
