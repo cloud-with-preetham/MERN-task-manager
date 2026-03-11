@@ -13,7 +13,7 @@ RUN apt-get update \
     && rm -rf /var/lib/apt/lists/*
 
 #installing dependencies
-RUN npm install
+RUN npm install --legacy-peer-deps
 
 #copy actual source code
 COPY . .
