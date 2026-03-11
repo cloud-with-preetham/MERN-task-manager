@@ -24,6 +24,9 @@ RUN npm run build
 #2nd stage base image
 FROM nginx:stable-alpine
 
+#updating & upgrading fix or trivy scan
+RUN apk update && apk upgrade --no-cache
+
 #adding non-root user
 RUN addgroup -S appgroup && adduser -S -G appgroup appuser
 
