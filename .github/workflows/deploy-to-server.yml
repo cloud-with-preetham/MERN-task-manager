@@ -65,7 +65,7 @@ jobs:
           target: ~/devsecops
 
       - name: SSH to server & run the app
-        uses: appleboy/scp-action@v1
+        uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.SSH_HOST }}
           username: ${{ secrets.SSH_USER }}
