@@ -22,7 +22,7 @@ jobs:
           script: |
             echo "Installing required packages"
             sudo apt-get update
-            sudo apt-get install docker.io
+            sudo apt-get install docker.io -y
             sudo apt-get install ca-certificates curl gnupg
 
             sudo install -m 0755 -d /etc/apt/keyrings
@@ -33,7 +33,7 @@ jobs:
 
             sudo apt-get update
             
-            sudo apt-get install docker-compose-plugin
+            sudo apt-get install docker-compose-plugin -y
 
             usermod -aG docker $USER
             newgrp docker
