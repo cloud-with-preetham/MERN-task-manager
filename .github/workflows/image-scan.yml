@@ -8,8 +8,9 @@ jobs:
   build-push:
     uses: ./.github/workflows/docker-build-push.yml
     secrets: inherit
-    
+
   scan:
+    needs: [build-push]
     runs-on: ubuntu-latest
     strategy:
       matrix:
