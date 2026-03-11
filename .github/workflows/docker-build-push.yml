@@ -34,4 +34,4 @@ jobs:
           tags: |
             ${{ vars.DOCKERHUB_USER }}/mern-${{ matrix.folder }}:latest
             ${{ vars.DOCKERHUB_USER }}/mern-${{ matrix.folder }}:${{ github.ref_name }}
-            ${{ vars.DOCKERHUB_USER }}/mern-${{ matrix.folder }}:${{ github.sha }}
+            ${{ vars.DOCKERHUB_USER }}/mern-${{ matrix.folder }}:${GITHUB_SHA::7}
