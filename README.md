@@ -2,6 +2,8 @@
 
 ### A full-stack Task Management application built using the MERN (MongoDB, Express, React, Node) architecture, fully containerized and hardened.
 
+## the project uses Vite 6 and Tailwind 4, which are cutting-edge for 2026.
+
 ## Architecture Highlights:
 
 1. Frontend: React served by Nginx (Alpine) running as a non-root user.
