@@ -15,16 +15,11 @@ RUN apt-get update \
 #installing dependencies
 RUN npm ci --legacy-peer-deps
 
-#RUN npm install react-scripts --legacy-peer-deps
-
 #copy actual source code
 COPY . .
 
 #building app
 RUN npm run build
-
-#listing all files of containers /app directory
-#RUN ls -la
 
 #2nd stage base image
 FROM nginx:alpine

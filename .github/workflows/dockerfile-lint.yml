@@ -1,7 +1,7 @@
 name: dockerfile validate
 
 on:
-  push:
+  workflow_call:
 
 jobs:
 
